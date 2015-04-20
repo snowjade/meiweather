@@ -82,7 +82,7 @@ public class MeiWeatherDB {
 				City city = new City();
 				city.setId(cursor.getInt(cursor.getColumnIndex("id")));
 				city.setCityName(cursor.getString(cursor
-						.getColumnIndex("city_Name")));
+						.getColumnIndex("city_name")));
 				city.setCityCode(cursor.getString(cursor
 						.getColumnIndex("city_code")));
 				city.setProvinceId(cursor.getInt(cursor
@@ -99,7 +99,7 @@ public class MeiWeatherDB {
 			values.put("county_name", county.getCountyName());
 			values.put("county_code", county.getCountyCode());
 			values.put("city_id", county.getCityId());
-			db.insert("Coutny", null, values);
+			db.insert("County", null, values);
 		}
 	}
 	
